@@ -160,15 +160,15 @@ class Input_box(pygame.sprite.Sprite):
     def load(self):
         global getting_input,displaying_graph
         writer.reset()
+        gen_key(self.load_vals[0])
 
         i = 1
-        for player in self.load_vals[0][::-1]:
+        for player in self.load_vals[0]:
             Working_Scraper.load(player,self.load_vals[1],i)
             i += 1
         
         getting_input = False
-        self.update()
-        gen_key(self.load_vals[0])
+        self.update()        
         displaying_graph = True
         load_graph()
 
