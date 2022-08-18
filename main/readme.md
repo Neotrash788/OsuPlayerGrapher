@@ -4,7 +4,9 @@
  
 Click load player, a black text box will appear
  
-Type in the name/s of player/s without capitals
+Type in the name/s of player/s without capitals and press enter
+
+Type in the number of plays and press enter
  
 To compare players, separate names with a backslash (p1/p2/p3...)
  
