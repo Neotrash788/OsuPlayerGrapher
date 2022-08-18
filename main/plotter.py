@@ -189,8 +189,8 @@ def load_diff_vals() -> None:
 
     vals = []
 
-    for path in os.listdir("Locals"):
-        data = writer.read("Locals/" + path)
+    for i in range(len(os.listdir("Locals"))):
+        data = writer.read(f"Locals/p{i + 1}.json")
         vals.append([get_advrege(data[head]) for head in headdings])
 
     ranges = [(0,11,1),(0,11,1),(0,11,1),(0,198,18),(80,388,28),(5,10.5,0.5)]
@@ -203,8 +203,8 @@ def load_mod_vals() -> None:
     headdings = ["fls","hts","ezs","hrs","dts","hds","nms"]
 
     vals = []
-    for path in os.listdir("Locals"):
-        data = writer.read("Locals/" + path)
+    for i in range(len(os.listdir("Locals"))):
+        data = writer.read(f"Locals/p{i + 1}.json")
         vals.append([get_advrege(data[head]) * 100 for head in headdings])
 
     ranges = [(0,110,10) for i in range(7)]
@@ -219,8 +219,8 @@ def load_mod_pps() -> None:
     headdings = ["fl_pp","ht_pp","ts_pp","sd_pp","pf_pp","hd_pp","hr_pp","nm_pp","ez_pp","no_choke_pp","dt_pp"]
 
     vals = []
-    for path in os.listdir("Locals"):
-        data = writer.read("Locals/" + path)
+    for i in range(len(os.listdir("Locals"))):
+        data = writer.read(f"Locals/p{i + 1}.json")
         vals.append([get_advrege(data[head]) for head in headdings])
 
     ranges = [(0,7513,683) for i in range(11)]
@@ -236,8 +236,8 @@ def load_play_details() -> None:
 
     vals = []
 
-    for path in os.listdir("Locals"):
-        data = writer.read("Locals/" + path)
+    for i in range(len(os.listdir("Locals"))):
+        data = writer.read(f"Locals/p{i + 1}.json")
         va = []
 
         headings = ["accs","combos","misses","chokes","pps"]
